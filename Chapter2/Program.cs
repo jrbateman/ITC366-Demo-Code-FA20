@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using System.Threading.Channels;
 
 namespace Chapter_2
 
@@ -60,8 +61,8 @@ namespace Chapter_2
 
             // LONGS
                 // Longs are 64-bit signed integers
-                Console.WriteLine("Biggest Long : {0}", long.MaxValue);
-                Console.WriteLine("Smallest Long : {0}", long.MinValue);
+                    Console.WriteLine("Biggest Long : {0}", long.MaxValue);
+                    Console.WriteLine("Smallest Long : {0}", long.MinValue);
 
             // BIGINTEGER
                 // Used to store very large numbers
@@ -69,9 +70,9 @@ namespace Chapter_2
                 // Select Assemblies -> System.Numerics.dll click Ok
                 // Add this line using System.Numerics; at the top
                 // Define the value using a text literal
-                BigInteger bigNum = BigInteger.Parse("12345123451234512345");
-                Console.WriteLine("Big Num * 2 = {0}", bigNum * 2);
-                Console.WriteLine();
+                    BigInteger bigNum = BigInteger.Parse("12345123451234512345");
+                    Console.WriteLine("Big Num * 2 = {0}", bigNum * 2);
+                    Console.WriteLine();
                 
                 // Other Integral Data Types
                 // short : 16-bit signed int -32,768 to 32,767
@@ -85,7 +86,7 @@ namespace Chapter_2
 
             // FLOATS
                 // Floats are 32-bit float types
-            Console.WriteLine("Biggest Float : {0}", float.MaxValue.ToString("#"));
+                Console.WriteLine("Biggest Float : {0}", float.MaxValue.ToString("#"));
 
                 // It is precise to 7 digits
                 float fltPiVal = 3.141592F;
@@ -129,12 +130,102 @@ namespace Chapter_2
                 moneyString = someMoney2.ToString("F3");
                 Console.WriteLine($"The double 123 prints like this using the F3 string formatter {moneyString}");
                 Console.WriteLine();
-            
+
             // *****************************************************************************************************
 
             // Using Arithmetic Operators
+                // + addition
+                // - subtraction
+                // * multiplication
+                // / division
+                // % modulus (remainder)
+
+                int i = 1;
+                int j = 2;
+                int result = i + j;
+                Console.WriteLine($"i + j = {result}");
+                Console.WriteLine();
+
+                int result2 = i - j;
+                Console.WriteLine($"i - j = {result2}");
+                Console.WriteLine();
+
+                int result3 = i * j;
+                Console.WriteLine($"i * j = {result3}");
+                Console.WriteLine();
+
+                int result4 = i / j;
+                Console.WriteLine($"i / j = {result4}");
+                Console.WriteLine();
+
+                
+                i = i + 5;
+                Console.WriteLine($"i + 5 = {i}");
+                Console.WriteLine();
+                i += 5;
+                Console.WriteLine($"i += 5 = {i}");
+                Console.WriteLine();
+                i++;
+                Console.WriteLine($"i++ = {i}");
+                Console.WriteLine();
+                i--;
+                Console.WriteLine($"i--= {i}");
+                Console.WriteLine();
+
+
+                int myInteger = (5 + 1) * 7;
+                Console.WriteLine(myInteger.ToString());
+                Console.WriteLine();
+
+                double myDouble = 5.5;
+                myInteger = 7;
+                int myOtherInteger = 4;
+
+                Console.WriteLine("myDouble = 5.5, myInteger = 7, myOtherInteger = 4");
+                Console.WriteLine();
+
+                double myResult = myDouble + myInteger;
+                Console.WriteLine($"mDouble + myInteger = {myResult}");
+                Console.WriteLine();
+
+                int myResult2 = (int)myDouble + myInteger;
+                Console.WriteLine($"(int) mDouble + myInteger = {myResult2}");
+                Console.WriteLine();
+
+                int myResult3 = myInteger / myOtherInteger;
+                Console.WriteLine($"myInteger/myOtherInteger = {myResult3}");
+                Console.WriteLine();
+
+                double myResult4 = (double)myInteger / (double)myOtherInteger;
+                Console.WriteLine($"(double)myInteger / (double)myOtherInteger = {myResult4}");
+                Console.WriteLine();
+
+                var mod = myInteger % myOtherInteger;
+                Console.WriteLine($"myInteger % myOtherInteger = {mod}");
+                Console.WriteLine();
+
+            //*******************************************************************************
+
 
             // bool Data Type
+                // Bools store true or false
+                    bool canIlegallyDrink = true;
+                    Console.WriteLine(canIlegallyDrink);
+
+                    bool b = false;
+                    Console.WriteLine(b);
+
+                // WriteLine automatically converts the value of b to text.
+                    Console.WriteLine(b);
+
+                    bool isBigger = 6 > 5; // Value stored would be true
+                    bool isSmallerOrEqual = 7 <= 4; // Value stored would be false
+
+                    int hoursWorked = 50;
+                    int annualIncome = 90000;
+                    bool doesEmployeeReceiveOvertime = hoursWorked > 40; 
+                    bool isHighTaxBracket = annualIncome > 100000;
+
 
             // Numeric Type Conversion
 
