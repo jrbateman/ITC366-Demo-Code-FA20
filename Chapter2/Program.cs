@@ -94,9 +94,9 @@ namespace Chapter_2
                 Console.WriteLine();
             
             // DOUBLES
-            // Doubles are 64-bit float types
-            // A double data type can hold 15 or 16 significant digits of accuracy.
-            // A double given the value 123456789.987654321 will appear as 123456789.987654
+                // Doubles are 64-bit float types
+                // A double data type can hold 15 or 16 significant digits of accuracy.
+                // A double given the value 123456789.987654321 will appear as 123456789.987654
             double dblNumber = 123456789.987654321D;
                 Console.WriteLine($"The double 123456789.987654321 will appear as {dblNumber}");
                 Console.WriteLine();
@@ -116,6 +116,21 @@ namespace Chapter_2
                 decimal dcm = 1M / 3;
                 Console.WriteLine("float: {0} double: {1} decimal: {2}", flt, dbl, dcm);
 
+            // Formatting Floating Point Numbers
+                double myMoney = 14.00;
+                Console.WriteLine("14.00 prints as {0}", myMoney);
+                Console.WriteLine("The two zeros to the right of the decimal point in the assigned value will not appear in the output because they add no mathematical information. ");
+                Console.WriteLine();
+
+                double someMoney2 = 123; 
+                string moneyString; 
+                moneyString = someMoney2.ToString("F");
+                Console.WriteLine($"The double 123 prints like this using the F string formatter {moneyString}");
+                moneyString = someMoney2.ToString("F3");
+                Console.WriteLine($"The double 123 prints like this using the F3 string formatter {moneyString}");
+                Console.WriteLine();
+            
+            // *****************************************************************************************************
 
             // Using Arithmetic Operators
 
