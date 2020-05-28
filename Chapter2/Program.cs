@@ -228,6 +228,32 @@ namespace Chapter_2
 
 
             // Numeric Type Conversion
+                  
+                /*       
+                    int i;
+                    i = "3";
+                */     
+                
+                /*
+                    int i = 2000000000;
+                    long j = i;
+                */  
+
+                /*    
+                    long i = 2000000000;
+                    int j = (int)i;
+                */  
+
+                /*
+                    
+                    double kk = 2.5;
+                    int jj = (int)kk;
+
+                 
+                    int j = int.Parse(i);
+                    int k = j + 1;
+
+                */
 
             // char Data Type
 
