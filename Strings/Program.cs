@@ -53,6 +53,8 @@ namespace Strings
             string string22 = "This is one sentence. " + "This is a second. ";
             string2 += "This is a third sentence.";
             Console.WriteLine(string22);
+            Console.WriteLine();
+            Console.WriteLine();
             // The example displays output like the following:
             //    Today is Tuesday, July 06, 2011.
             //    This is one sentence. This is a second. This is a third sentence.
@@ -69,6 +71,7 @@ namespace Strings
                 sentence.IndexOf(" ", startPosition) - startPosition);
 
             Console.WriteLine("Second word: " + word2);
+            Console.WriteLine();
             // The example displays the following output:
             //       Second word: sentence
 
