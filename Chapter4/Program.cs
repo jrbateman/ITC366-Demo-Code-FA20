@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
+using System.Transactions;
 
 namespace Chapter4
 {
@@ -7,7 +9,20 @@ namespace Chapter4
     {
 
         public enum Color { Red, Green, Blue }
-
+        public enum Directions
+        {
+            Up,
+            Down,
+            Right,
+            Left
+        }
+        public enum Orientation
+        {
+            North,
+            South,
+            East,
+            West
+        }
 
         static void Main(string[] args)
         {
@@ -159,7 +174,7 @@ namespace Chapter4
                     break;
             }
 
-
+            Console.WriteLine();
             /*
             
             The default case
@@ -172,11 +187,33 @@ namespace Chapter4
 
              */
 
+            /*
+                Switch features introduced in C# 8.0
+                https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/switch-expression
+                The following example shows the structure of a switch expression. 
+                It translates values from an enum representing visual directions in an online map to the corresponding cardinal direction:
+
+            */
+
+            var direction = Directions.Right;
+            Console.WriteLine($"Map view direction is {direction}");
+
+            var orientation = direction switch
+            {
+                Directions.Up => Orientation.North,
+                Directions.Right => Orientation.East,
+                Directions.Down => Orientation.South,
+                Directions.Left => Orientation.West,
+            };
+            Console.WriteLine($"Cardinal orientation is {orientation}");
+            Console.WriteLine();
+
 
             // Using the NOT operator
             // You use the NOT operator, which is written as an exclamation point ( ! ), 
             // to negate the result of any Boolean expression.
 
+            age = 20;
             int premium;
 
             if (age < 26) premium = 200; 
@@ -191,6 +228,51 @@ namespace Chapter4
             if (!(age >= 26)) premium = 200; 
             else premium = 125;
 
+            Console.WriteLine($" Premium = {premium}");
+
+
+            // Avoiding Common Errors When Making Decisions
+
+            //	Using the assignment operator ( = ) instead of the comparison operator ( == ) when testing for equality
+
+            int x = 5;
+
+            if (x == 5)
+               Console.WriteLine($" x =  {x}");
+
+            // 	Failing to block a set of statements with curly braces when several statements depend on the if or the else statement
+
+
+            if (x == 5)
+                Console.WriteLine($" x =  {x}");
+                Console.WriteLine("This will not execture in the If statement");
+
+            if (x == 5)
+            {
+                Console.WriteLine($" x =  {x}");
+                Console.WriteLine("This will not execture in the If statement");
+            }
+
+            Console.WriteLine();
+
+            //  Performing Accurate and Efficient Range Checks
+            int saleAmount = 1100;
+            double commissionRate;
+
+            if (saleAmount >= 1000)
+                { commissionRate = 0.08; 
+                  Console.WriteLine($"commission rate = {commissionRate}"); 
+                }
+            if (saleAmount >= 500)
+                {
+                commissionRate = 0.06;
+                Console.WriteLine($"commission rate = {commissionRate}");
+                }
+            if (saleAmount <= 499)
+                {
+                commissionRate = 0.05;
+                Console.WriteLine($"commission rate = {commissionRate}");
+                }
         }
     }
 }
