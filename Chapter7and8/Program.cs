@@ -3,9 +3,9 @@
 namespace Chapter7and8
 {
     class Program
-    {
-        static void Main(string[] args)
         {
+        static void Main(string[] args)
+            {
             //A method is an encapsulated series of statements that carry out a task. 
             //Any class can contain an unlimited number of methods. 
 
@@ -21,8 +21,8 @@ namespace Chapter7and8
             // Creating Methods that do not return a value
             // Declaring variables in a method (scope)
 
-            int a = 12; 
-            Console.WriteLine("In Main() a is {0}", a); 
+            int a = 12;
+            Console.WriteLine("In Main() a is {0}", a);
             MethodWithItsOwnA();
             Console.WriteLine("In Main() a is {0}", a);
 
@@ -37,20 +37,24 @@ namespace Chapter7and8
 
             // Creating Methods with  Multiple Input Parameters
 
+            const double RATE = 0.07;
+            DisplaySalesTax(salesAmount, RATE);
+
+
             // Returning Values from Methods
             }
 
         private static void ShowWelcomeMessage()
             {
 
-            Console.WriteLine("Welcome To Intro to C#"); 
-            Console.WriteLine("Have fun!"); 
+            Console.WriteLine("Welcome To Intro to C#");
+            Console.WriteLine("Have fun!");
             Console.WriteLine("Enjoy the class!");
 
             }
         private static void MethodWithItsOwnA()
             {
-            int a = 354; 
+            int a = 354;
             Console.WriteLine("In method a is {0}", a);
 
             }
@@ -59,10 +63,16 @@ namespace Chapter7and8
             double tax;
             const double RATE = 0.07;
             tax = saleAmount * RATE;
-            Console.WriteLine("The tax on {0} is {1}",saleAmount, tax.ToString("C"));
+            Console.WriteLine("The tax on {0} is {1}", saleAmount, tax.ToString("C"));
 
             }
+        private static void DisplaySalesTax(double saleAmount, double taxRate)
+            {
+            double tax;
+            tax = saleAmount * taxRate;
 
+            Console.WriteLine("The tax on {0} at {1} is {2}", saleAmount.ToString("C"), taxRate.ToString("P"), tax.ToString("C"));
 
+            }
         }
 }
