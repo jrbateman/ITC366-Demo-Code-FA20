@@ -1,6 +1,9 @@
 ﻿using System;
 
 namespace Chapter7and8
+
+    // Methods
+
 {
     class Program
         {
@@ -16,7 +19,7 @@ namespace Chapter7and8
 
             ShowWelcomeMessage();
             Console.WriteLine("Hello");
-
+            Console.WriteLine();
 
             // Creating Methods that do not return a value
             // Declaring variables in a method (scope)
@@ -25,6 +28,7 @@ namespace Chapter7and8
             Console.WriteLine("In Main() a is {0}", a);
             MethodWithItsOwnA();
             Console.WriteLine("In Main() a is {0}", a);
+            Console.WriteLine();
 
 
             // Creating Methods with a Single Input Parameter
@@ -33,6 +37,7 @@ namespace Chapter7and8
 
             DisplaySalesTax(salesAmount);
             DisplaySalesTax(200.00);
+            Console.WriteLine();
 
 
             // Creating Methods with  Multiple Input Parameters
@@ -42,6 +47,32 @@ namespace Chapter7and8
 
 
             // Returning Values from Methods
+
+            double myHours = 37.5; 
+            double myRate = 12.75; 
+            double grossPay;
+            
+            Console.WriteLine("I worked {0} hours at {1} per hour", myHours, myRate);
+            
+            grossPay = CalcPay(myHours, myRate);
+
+            Console.WriteLine("My gross pay is {0}", grossPay.ToString("C"));
+            Console.WriteLine();
+
+            // Returning boolean Values
+
+            Console.WriteLine("TestInput(0) = {0}", TestInput(0));
+            Console.WriteLine("TestInput(1) = {0}", TestInput(1));
+            Console.WriteLine("TestInput(5) = {0}", TestInput(5));
+            Console.WriteLine("TestInput(11) = {0}", TestInput(11));
+            Console.WriteLine();
+            }
+
+        private static double CalcPay(double myHours, double myRate)
+            {
+                double gross; 
+                gross = myHours * myRate; 
+                return gross;
             }
 
         private static void ShowWelcomeMessage()
@@ -74,5 +105,12 @@ namespace Chapter7and8
             Console.WriteLine("The tax on {0} at {1} is {2}", saleAmount.ToString("C"), taxRate.ToString("P"), tax.ToString("C"));
 
             }
+        public static Boolean TestInput(int val)
+            {
+            if (val < 1 || val > 10)
+                return false;
+            return true;
+            }
+
         }
 }

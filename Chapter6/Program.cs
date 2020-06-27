@@ -4,6 +4,8 @@ using System.Collections.Generic;
 namespace Chapter6
 {
     class Program
+        // Arrays & Lists
+
     {
         static void Main(string[] args)
         {
