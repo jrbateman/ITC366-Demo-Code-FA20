@@ -32,7 +32,8 @@ namespace Chapter5
                 }
 
                 // Break jumps completely out of the loop
-                if (i == 9) break;
+                if (i == 9) 
+                    break;
 
                 Console.WriteLine(i);
                 i++;
@@ -48,8 +49,14 @@ namespace Chapter5
 
 
             // Declare loop control variable and limit 
+
+            Console.WriteLine();
+            Console.WriteLine(" For Loop");
+            Console.WriteLine();
+            
+
             int x; 
-              const int LIMIT = 10;
+            const int LIMIT = 10;
 
             // Using a for loop to display 1 through 10 
 
@@ -85,6 +92,8 @@ namespace Chapter5
             int secretNumber = rnd.Next(1, 11);
             int numberGuessed = 0;
 
+
+         
 
             do
             {

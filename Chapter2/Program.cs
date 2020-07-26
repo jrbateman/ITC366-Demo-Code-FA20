@@ -17,6 +17,18 @@ namespace Chapter_2
         static void Main(string[] args)
         {
             // Declaring Variables
+            /*
+                Variable -  A named location in computer memory that can hold different values at different points in time
+                Data type - Describes the format and size of(amount of memory occupied by) a data item
+
+                A declaration includes the following:
+                        The data type that the variable will store
+                        The variable’s name (its identifier)
+                        An optional assignment operator and assigned value when you want a variable to contain an initial value
+                        An ending semicolon
+
+            */
+
             int Age;
             int myAge = 25;
             int yourAge = 19;
@@ -61,6 +73,9 @@ namespace Chapter_2
 
 
             // Integral Data Types
+            //Types that store whole numbers
+            //     byte, sbyte, short, ushort, int, uint, long, ulong, and char
+
             // INTEGERS
             // Integers are 32-bit signed integers. Signed Ints can be negative. Unsigned cannot be negative
             Console.WriteLine("Biggest Integer : {0}", int.MaxValue);
@@ -88,8 +103,9 @@ namespace Chapter_2
             // ushort : 16-bit unsigned int 0 to 65,535
 
 
-            // Floating Point Data Types
-            // C# supports three floating-point data types: float, double, and decimal
+
+            //*******************************************************************************************
+
 
             // FLOATS
             // Floats are 32-bit float types

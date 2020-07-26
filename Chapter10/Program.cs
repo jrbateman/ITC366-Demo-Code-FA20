@@ -88,8 +88,6 @@ namespace Chapter10
             return greeting;
             }
         }
-
-
     class CommissionEmployee : Employee
         {
         //public double CommissionRate { get; set; }

@@ -73,6 +73,26 @@ namespace Chapter6
             // Do not have to be initialized with at length
             // Represents a strongly typed list of objects that can be accessed by index. Provides methods to search, sort, and manipulate lists.
 
+            // Version 1: create a List of ints.
+            // ... Add 4 ints to it.
+            var numbers = new List<int>();
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(5);
+            numbers.Add(7);
+            Console.WriteLine("LIST 1: " + numbers.Count);
+
+            // Version 2: create a List with an initializer.
+            var numbers2 = new List<int>() { 2, 3, 5, 7 };
+            Console.WriteLine("LIST 2: " + numbers2.Count);
+
+            // Part A: loop through List with foreach.
+            foreach (int number in numbers2)
+            {
+                // Part B: access each element with name.
+                System.Console.WriteLine("Element # {0} = ", number);
+            }
+
 
             List<Vehicle> listOfVechVehicles = new List<Vehicle>();
             List<Vehicle> listOfVechVehicles2 = new List<Vehicle>

@@ -31,10 +31,19 @@ namespace Chapter4
             -----IF / ELSE / -----
             Relational Operators: > < >= <= == !=
             Logical Operators: && || !
+            Ternary Operator
             */
 
 
-         int age = 17;
+            int age = 5;
+
+            // Talk about one line vs two
+            if (age == 5)
+            {
+                Console.WriteLine($"Age = {age}");
+            }
+
+            //int age = 17;
 
 
             if (age >= 5 && age <= 7)
@@ -45,6 +54,12 @@ namespace Chapter4
                 Console.WriteLine("Go to high school");
             else
                 Console.WriteLine("Go to college");
+
+            // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/if-else
+            // talk about using the else
+            // multiple else if maybe use a case statement
+
+
 
             //add watch and change value
 
@@ -70,7 +85,7 @@ namespace Chapter4
             */
 
             Color c = (Color)(new Random()).Next(0, 3);
-            Console.WriteLine("Swich Statement");
+            Console.WriteLine("Switch Statement");
             switch (c)
             {
                 case Color.Red:

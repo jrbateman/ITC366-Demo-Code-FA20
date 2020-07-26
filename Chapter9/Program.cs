@@ -4,7 +4,7 @@ namespace Chapter9
     {
     class Program
 
-        // Classes
+        // Classes and Objects
         {
         static void Main(string[] args)
             {
@@ -42,12 +42,17 @@ namespace Chapter9
             Console.WriteLine("# of Animals {0}",
                 Animal.GetNumAnimals());
 
-            //Call instance methos
+            //Call instance methods
             // Show what happens when method is not public
             fox.MakeSound();
             fox2.MakeSound();
 
             Console.ReadLine();
+
+
+            // Understanding Constructors
+            // A constructor is a method that instantiates (creates an instance of ) an object. 
+            //If you do not write a constructor for a class, then each class you create is automatically supplied with a public constructor with no parameters
 
 
             BankAccount myAccount = new BankAccount(25.00);

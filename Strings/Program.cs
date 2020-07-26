@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Strings
 {
@@ -28,7 +29,7 @@ namespace Strings
             // instantiaing using several string constuctor
 
             char[] chars = { 'w', 'o', 'r', 'd' };
-            sbyte[] bytes = { 0x41, 0x42, 0x43, 0x44, 0x45, 0x00 };
+           // byte[] bytes = { 0x41, 0x42, 0x43, 0x44, 0x45, 0x00 };
 
             // Create a string from a character array.
             string string11 = new string(chars);
@@ -148,7 +149,10 @@ namespace Strings
             Console.WriteLine("{0} compared to {1} is {2}",
                 w1, w2, w1.CompareTo(w2));
             Console.WriteLine("{0} compared to {1} is {2}",
-                w1, w2, String.Compare(w1, w2, true));
+                w1, w2, String.Compare(w1, w2, false));
+
+
+
 
             Console.WriteLine("s1.Equals(s3) is {0}", s1.Equals(s3));
 
