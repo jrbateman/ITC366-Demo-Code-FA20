@@ -69,6 +69,8 @@ namespace Chapter6
 
             Console.ReadLine();
 
+            // **********************************************************************************************
+
             // List verses Arrays
             // Do not have to be initialized with at length
             // Represents a strongly typed list of objects that can be accessed by index. Provides methods to search, sort, and manipulate lists.
@@ -115,6 +117,9 @@ namespace Chapter6
             }
 
             Console.WriteLine(listOfVechVehicles2.Count.ToString());
+
+
+            // **************************************************************************************
             // Multidimensional arrays
             // When you define an array like arrName[5] you
             // are saying you want to create boxes stacked 
@@ -144,24 +149,33 @@ namespace Chapter6
             // stack of 3 spread sheets with 2 rows and 2
             // columns worth of data on each page
 
-            // foreach can be used to cycle through an array
+
+            // ******************************************************************
+
             int[] randNums = { 1, 4, 9, 2 };
 
-            // You can pass an array to a function
+            // you can pass array to function 
             PrintArray(randNums, "ForEach");
+            Console.WriteLine();
 
-            // Sort array
+            //Sort
             Array.Sort(randNums);
+            PrintArray(randNums, "Sorted");
+            Console.WriteLine();
 
-            // Reverse array
+            //Reverse Sort
             Array.Reverse(randNums);
+            PrintArray(randNums, "Reverse Sorted");
+            Console.WriteLine();
 
-            // Get index of match or return -1
-            Console.WriteLine("1 at index : {0} ",
-                Array.IndexOf(randNums, 1));
+            // Get the index where we have match
+            Console.WriteLine("1 is found at index {0}", Array.IndexOf(randNums, 1));
+            Console.WriteLine();
 
-            // Change value at index 1 to 0
-            randNums.SetValue(0, 1);
+            // Change value at index 3 to 0
+            randNums.SetValue(0, 3);
+            PrintArray(randNums, "Changed the value at index  0 to a 3");
+            Console.WriteLine();
 
             // Copy part of an array to another
             int[] srcArray = { 1, 2, 3 };
@@ -189,15 +203,15 @@ namespace Chapter6
             // Search for an element that matches the conditions
             // defined by the specified predicate
             int[] numArray = { 1, 11, 22 };
-            Console.WriteLine("> 10 : {0}", Array.Find(numArray, GT10));
+           // Console.WriteLine("> 10 : {0}", Array.Find(numArray, GT10));
 
         }
 
-        static void PrintArray(int[] intArray, string mess)
+        static void PrintArray(int[] intArray, string msg)
         {
-            foreach (int k in intArray)
+            foreach (int num in intArray)
             {
-                Console.WriteLine("{0} : {1} ", mess, k);
+                Console.WriteLine($"{msg} : {num} ");
             }
         }
     }
