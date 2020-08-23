@@ -4,7 +4,7 @@ namespace Chapter7and8
 
 // Methods
 
-    {
+{
     class Program
         {
         static void Main(string[] args)
@@ -30,6 +30,8 @@ namespace Chapter7and8
             Console.WriteLine("In Main() a is {0}", a);
             Console.WriteLine();
 
+
+            // ************************************ {Part 2 )
 
             // Creating Methods with a Single Input Parameter
 
@@ -68,7 +70,7 @@ namespace Chapter7and8
             Console.WriteLine();
 
             // Passing Array Values to a Method
-            // Passing by reference vs value (values change in the method)
+            // Passing by reference vs value (Reference change in the method)
 
             int[] someNums = { 10, 12, 22, 35 };
             int x;
@@ -89,13 +91,14 @@ namespace Chapter7and8
             Console.WriteLine();
 
 
-            // ************************************ {Part 2 Second Set of lectures)
+            // ************************************ {Part 3 )
 
 
             // Passing Parameters by Reference
 
             int xx = 4;
             Console.WriteLine();
+            Console.WriteLine("Pass by Reference");
             Console.WriteLine("In Main x is {0}", xx);
             DisplayReferenceParameter(ref xx);
             Console.WriteLine("In Main x is {0}", xx);
@@ -105,9 +108,14 @@ namespace Chapter7and8
 
             int xxx = 4;
             Console.WriteLine();
+            Console.WriteLine("Pass by Value");
             Console.WriteLine("In Main x is {0}", xxx);
             DisplayValueParameter(xxx);
             Console.WriteLine("In Main x is {0}", xxx);
+
+
+            // ************************************ Part 4 )
+
 
             // Overloading Methods
 
@@ -116,6 +124,8 @@ namespace Chapter7and8
             //When you make a purchase at a store, you might use one of a variety of “pay” methods they accept, for example, cash, a credit card, or a check.The “pay” method works differently depending on the type of currency sent to it, but all of the transactions are called “pay.” 
             //When you overload a C# method, you write multiple method implementations with the same name but different parameter lists. 
             //A method’s name and parameter list constitute the method’s signature.
+
+            //Press Ctrl + Shift + Space to see the list of overloads and arguments
 
             Console.WriteLine();
             DisplayWithBorder("Ed");
@@ -208,7 +218,9 @@ namespace Chapter7and8
             const int EXTRA_STARS = 4;
             const string SYMBOL = "*";
             int size = word.Length + EXTRA_STARS;
-            int x; for (x = 0; x < size; ++x)
+            int x; 
+            
+            for (x = 0; x < size; ++x)
                 Console.Write(SYMBOL);
 
             Console.WriteLine();

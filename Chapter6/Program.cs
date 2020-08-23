@@ -176,7 +176,7 @@ namespace Chapter6
             randNums.SetValue(0, 3);
             PrintArray(randNums, "Changed the value at index  0 to a 3");
             Console.WriteLine();
-
+    
             // Copy part of an array to another
             int[] srcArray = { 1, 2, 3 };
             int[] destArray = new int[2];

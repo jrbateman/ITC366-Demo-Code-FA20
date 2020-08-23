@@ -69,5 +69,14 @@ namespace Chapter9
             return numOfAnimals;
 
             }
+
+        public override string ToString()
+        {
+
+
+            return string.Format($"This animal's name is {name} and it's sounds is {sound}");
+           
+
         }
+    }
     }

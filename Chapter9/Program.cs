@@ -4,7 +4,6 @@ namespace Chapter9
     {
     class Program
 
-        // Classes and Objects
         {
         static void Main(string[] args)
             {
@@ -28,6 +27,8 @@ namespace Chapter9
                 sound = "Raaaw"
                 };
 
+            Console.WriteLine(fox.ToString());
+
             Animal dog = new Animal();
             dog.name = "Bowser";
             dog.sound = "Ruff";
@@ -49,6 +50,8 @@ namespace Chapter9
 
             Console.ReadLine();
 
+
+            //*********************************************************************
 
             // Understanding Constructors
             // A constructor is a method that instantiates (creates an instance of ) an object. 
