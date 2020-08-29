@@ -24,7 +24,7 @@ namespace Homework_Template
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("Homework ?");
+            Console.WriteLine("Homework 1");
             Console.WriteLine();
             Console.WriteLine("Hit [1] to run Exercise 1.");
             Console.WriteLine("Hit [2] to run Exercise 2.");
